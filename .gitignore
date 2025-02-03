@@ -1,0 +1,9 @@
+.venv
+/blog_sections_of_html
+/cloud_function_update_pricing
+/csvs
+/htmls_for_examples
+/jsons_for_examples
+/logs
+/testing_code
+.env

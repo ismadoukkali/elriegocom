@@ -1,0 +1,9 @@
+2025-01-27 00:41:18,149 - INFO - Starting process for ASIN: B0977RF2KT
+2025-01-27 00:41:18,460 - INFO - Product with ASIN B0977RF2KT does not exist, proceeding with import.
+2025-01-27 00:41:43,346 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-27 00:41:45,010 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-27 00:41:48,312 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-27 00:41:49,116 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-27 00:41:50,646 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-27 00:41:51,001 - INFO - Product pushed successfully with ID: 38a1ff52-10a7-49d7-8193-fee1f70b3f9b
+2025-01-27 00:41:51,389 - INFO - Product added to reference with ID: e1c538be-6997-4e51-af06-ef28ef127bb6

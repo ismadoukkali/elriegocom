@@ -1,0 +1,46 @@
+2025-01-23 15:30:31,096 - INFO - Starting process for ASIN: B0B2W78N7Z
+2025-01-23 15:30:31,417 - INFO - Product with ASIN B0B2W78N7Z does not exist, proceeding with import.
+2025-01-23 15:31:09,554 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-23 15:31:13,360 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-23 15:31:15,057 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-23 15:31:16,315 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-23 15:31:17,212 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-23 15:31:17,519 - INFO - Product pushed successfully with ID: 989fa771-738b-4681-91b9-e538fdcd5724
+2025-01-23 15:31:18,027 - INFO - Product added to reference with ID: 2712735e-8f09-4632-b342-a56ae853e316
+2025-01-23 15:38:31,547 - INFO - Starting bestsellers import for category 5940517031
+2025-01-23 15:38:59,871 - INFO - Found 10 products to process
+2025-01-23 15:38:59,878 - ERROR - Error processing task: 
+2025-01-23 15:38:59,882 - ERROR - Error processing task: 
+2025-01-23 15:38:59,885 - ERROR - Error processing task: 
+2025-01-23 15:38:59,887 - ERROR - Error processing task: 
+2025-01-23 15:38:59,889 - ERROR - Error processing task: 
+2025-01-23 15:38:59,890 - ERROR - Error processing task: 
+2025-01-23 15:38:59,891 - ERROR - Error processing task: 
+2025-01-23 15:38:59,892 - ERROR - Error processing task: 
+2025-01-23 15:38:59,893 - ERROR - Error processing task: 
+2025-01-23 15:38:59,894 - ERROR - Error processing task: 
+2025-01-23 15:38:59,895 - INFO - 
+Import completed:
+- Total products: 10
+- Successful: 0
+- Failed: 0
+            
+2025-01-23 15:39:19,361 - INFO - Starting bestsellers import for category 5940517031
+2025-01-23 15:39:48,049 - INFO - Found 10 products to process
+2025-01-23 15:39:48,059 - ERROR - Error processing task: 
+2025-01-23 15:39:48,064 - ERROR - Error processing task: 
+2025-01-23 15:39:48,068 - ERROR - Error processing task: 
+2025-01-23 15:39:48,075 - ERROR - Error processing task: 
+2025-01-23 15:39:48,077 - ERROR - Error processing task: 
+2025-01-23 15:39:48,079 - ERROR - Error processing task: 
+2025-01-23 15:39:48,080 - ERROR - Error processing task: 
+2025-01-23 15:39:48,082 - ERROR - Error processing task: 
+2025-01-23 15:39:48,083 - ERROR - Error processing task: 
+2025-01-23 15:39:48,085 - ERROR - Error processing task: 
+2025-01-23 15:39:48,086 - INFO - 
+Import completed:
+- Total products: 10
+- Successful: 0
+- Failed: 0
+            
+2025-01-23 15:43:24,167 - INFO - Starting bestsellers import for category 5940517031

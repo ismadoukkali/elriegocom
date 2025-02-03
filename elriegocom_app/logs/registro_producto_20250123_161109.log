@@ -1,0 +1,9 @@
+2025-01-23 16:11:09,163 - INFO - Starting process for ASIN: B09QPBTM2T
+2025-01-23 16:11:09,443 - INFO - Product with ASIN B09QPBTM2T does not exist, proceeding with import.
+2025-01-23 16:11:27,181 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-23 16:11:29,715 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-23 16:11:30,914 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-23 16:11:31,847 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-23 16:11:32,621 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-23 16:11:32,912 - INFO - Product pushed successfully with ID: 07f67777-87d5-4709-b475-aefc97d84a42
+2025-01-23 16:11:33,224 - INFO - Product added to reference with ID: 372e1e6a-034f-4e1a-ad7d-035eac477433

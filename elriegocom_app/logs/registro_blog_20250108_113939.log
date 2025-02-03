@@ -1,0 +1,9 @@
+2025-01-08 11:39:39,634 - INFO - Iniciando generación del blog...
+2025-01-08 11:39:39,634 - INFO - ASINs a procesar: B0D5MM8RBF, B08CHKBTYF
+2025-01-08 11:39:39,635 - INFO - Procesando ASIN: B0D5MM8RBF
+2025-01-08 11:39:39,635 - INFO - Procesando ASIN: B08CHKBTYF
+2025-01-08 11:39:39,635 - INFO - Generando secciones del blog...
+2025-01-08 11:40:05,751 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-08 11:40:21,140 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-08 11:40:25,204 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-08 11:40:26,487 - INFO - Blog completado y publicado

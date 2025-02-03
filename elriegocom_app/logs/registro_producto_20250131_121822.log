@@ -1,0 +1,8 @@
+2025-01-31 12:18:22,291 - INFO - Starting process for ASIN: B0CYGTCL3P
+2025-01-31 12:18:22,580 - INFO - Product with ASIN B0CYGTCL3P does not exist, proceeding with import.
+2025-01-31 12:18:48,129 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-31 12:18:51,625 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-31 12:18:53,524 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-31 12:18:54,647 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-31 12:18:54,957 - INFO - Product pushed successfully with ID: fad15d8d-7a55-4c32-95e9-45e3638190c9
+2025-01-31 12:18:55,289 - INFO - Product added to reference with ID: 36adee42-aa55-4dda-9227-9e1ddb1796f8

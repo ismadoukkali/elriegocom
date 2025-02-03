@@ -1,0 +1,7 @@
+2025-01-08 03:57:40,449 - INFO - Starting process for ASIN: B088PF1MPT
+2025-01-08 03:57:40,865 - INFO - Product with ASIN B088PF1MPT does not exist, proceeding with import.
+2025-01-08 03:58:09,959 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-08 03:58:12,061 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-08 03:58:12,453 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-08 03:58:12,877 - INFO - Product pushed successfully with ID: bbee09d6-c937-4a80-ba04-9d04d1a353de
+2025-01-08 03:58:13,279 - INFO - Product added to reference with ID: d8583035-847e-494e-84b2-2c162ca39a21

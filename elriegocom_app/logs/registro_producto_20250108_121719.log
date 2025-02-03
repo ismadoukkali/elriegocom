@@ -1,0 +1,20 @@
+2025-01-08 12:17:19,854 - INFO - Starting process for ASIN: B0CDL7CTTF
+2025-01-08 12:17:20,187 - INFO - Product with ASIN B0CDL7CTTF does not exist, proceeding with import.
+2025-01-08 12:17:41,806 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-08 12:17:44,177 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-08 12:17:46,758 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-08 12:17:47,050 - INFO - Product pushed successfully with ID: 76fec5ee-46cc-44e2-b952-569d2fe69633
+2025-01-08 12:17:47,351 - INFO - Product added to reference with ID: dce7ca19-d369-4822-aab5-bed50b694442
+2025-01-08 12:24:03,704 - INFO - Starting bestsellers import for category 12626500031
+2025-01-08 12:24:33,003 - INFO - Found 5 products to process
+2025-01-08 12:24:33,012 - ERROR - Error processing task: 
+2025-01-08 12:24:33,016 - ERROR - Error processing task: 
+2025-01-08 12:24:33,018 - ERROR - Error processing task: 
+2025-01-08 12:24:33,019 - ERROR - Error processing task: 
+2025-01-08 12:24:33,020 - ERROR - Error processing task: 
+2025-01-08 12:24:33,022 - INFO - 
+Import completed:
+- Total products: 5
+- Successful: 0
+- Failed: 0
+            
