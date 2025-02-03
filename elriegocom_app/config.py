@@ -3,6 +3,6 @@ from dataclasses import dataclass
 
 @dataclass
 class Config:
-    ADMIN_EMAIL = "admin@elriego.com"
-    ADMIN_PASSWORD = "L]x6z7!!d5~$FsPTfV~IsX[6[u-Q£"
+    ADMIN_EMAIL = os.getenv("ADMIN_EMAIL")
+    ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD")
     DB_PATH = "users.db"
