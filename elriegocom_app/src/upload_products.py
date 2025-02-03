@@ -573,14 +573,12 @@ class ElRiegoCOMClient:
         Pushes bestseller products to CMS with concurrent processing and progress tracking.
         """
         try:
-            logger.info(f"Starting bestsellers import for category {category_id}")
             bestsellers = get_bestsellers_by_category(category_id)
             bestsellers = bestsellers[:number_of_products]
             
             if not bestsellers:
                 raise Exception(f"No bestsellers found for category {category_id}")
                 
-            logger.info(f"Found {len(bestsellers)} products to process")
             
             # Results tracking
             results = {
@@ -616,20 +614,12 @@ class ElRiegoCOMClient:
                             progress_callback(result)
                             
                     except Exception as e:
-                        logger.error(f"Error processing task: {str(e)}")
                         if progress_callback:
                             progress_callback({
                                 "success": False,
                                 "asin": "unknown",
                                 "message": f"Error: {str(e)}"
                             })
-            
-            logger.info(f"""
-Import completed:
-- Total products: {results['total']}
-- Successful: {len(results['success'])}
-- Failed: {len(results['failure'])}
-            """)
             
             return results
 
@@ -653,7 +643,7 @@ Import completed:
             return results
 
         except Exception as e:
-            logger.error(f"Error in sync wrapper: {str(e)}")
+            print(f"Error in sync wrapper: {str(e)}")
             raise
 
 # # Main script
