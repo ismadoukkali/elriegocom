@@ -1,0 +1,162 @@
+2025-02-03 07:54:49,472 - INFO - Starting process for ASIN: B0CW35BJXC
+2025-02-03 07:54:49,472 - INFO - Starting process for ASIN: B071D1NTBC
+2025-02-03 07:54:49,474 - INFO - Starting process for ASIN: B071XPX45T
+2025-02-03 07:54:49,786 - INFO - Product with ASIN B0CW35BJXC does not exist, proceeding with import.
+2025-02-03 07:54:49,809 - INFO - Product with ASIN B071D1NTBC does not exist, proceeding with import.
+2025-02-03 07:54:49,831 - INFO - Product with ASIN B071XPX45T already exists in CMS.
+2025-02-03 07:54:49,832 - INFO - Starting process for ASIN: B071XQ7HTX
+2025-02-03 07:54:50,145 - INFO - Product with ASIN B071XQ7HTX does not exist, proceeding with import.
+2025-02-03 07:55:07,851 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:55:07,907 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:55:08,795 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:55:10,416 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:55:10,795 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:55:10,898 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:55:11,667 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:55:12,115 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:55:12,117 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:55:12,567 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:55:13,092 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:55:13,128 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:55:13,149 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:55:13,599 - INFO - Product pushed successfully with ID: d65fd162-30c3-4256-a470-2bce825464af
+2025-02-03 07:55:13,941 - INFO - Product added to reference with ID: 6ee5d92a-e1ac-460a-8880-a68f642cbb60
+2025-02-03 07:55:13,942 - INFO - Starting process for ASIN: B07YQX5CGK
+2025-02-03 07:55:13,950 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:55:14,290 - INFO - Product with ASIN B07YQX5CGK does not exist, proceeding with import.
+2025-02-03 07:55:14,297 - INFO - Product pushed successfully with ID: e45082e0-3a4f-4cde-9e45-0f441b5bd8c8
+2025-02-03 07:55:14,655 - INFO - Product added to reference with ID: 97d8ca35-d93b-4df7-96e0-530b7851a7a6
+2025-02-03 07:55:14,656 - INFO - Starting process for ASIN: B0CX4TH6SC
+2025-02-03 07:55:14,997 - INFO - Product with ASIN B0CX4TH6SC already exists in CMS.
+2025-02-03 07:55:14,998 - INFO - Starting process for ASIN: B0C8MCTWMZ
+2025-02-03 07:55:15,310 - INFO - Product with ASIN B0C8MCTWMZ does not exist, proceeding with import.
+2025-02-03 07:55:17,061 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:55:17,512 - INFO - Product pushed successfully with ID: ca365084-57d1-4f47-86ff-81e8ea00ae09
+2025-02-03 07:55:17,995 - INFO - Product added to reference with ID: 3ca49537-099c-431f-84d5-aa8f161f120e
+2025-02-03 07:55:17,996 - INFO - Starting process for ASIN: B0D3P1DQ2V
+2025-02-03 07:55:18,315 - INFO - Product with ASIN B0D3P1DQ2V does not exist, proceeding with import.
+2025-02-03 07:55:32,741 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:55:36,233 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:55:37,468 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:55:38,680 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:55:39,602 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:55:39,944 - INFO - Product pushed successfully with ID: 833ea43c-a86f-4e8d-8cd2-384420727bae
+2025-02-03 07:55:40,292 - INFO - Product added to reference with ID: d9a27141-d4d4-446e-a84b-adf795cab2d5
+2025-02-03 07:55:40,292 - INFO - Starting process for ASIN: B07YQRNN6Q
+2025-02-03 07:55:40,615 - INFO - Product with ASIN B07YQRNN6Q does not exist, proceeding with import.
+2025-02-03 07:55:40,934 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:55:42,825 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:55:45,838 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:55:46,562 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:55:46,866 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:55:47,698 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:55:47,712 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:55:48,716 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:55:48,789 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:55:49,126 - INFO - Product pushed successfully with ID: f9ffd33b-09aa-4540-9432-1820c652d707
+2025-02-03 07:55:49,483 - INFO - Product added to reference with ID: a16b0027-9736-413f-a540-21ad304fcac8
+2025-02-03 07:55:49,483 - INFO - Starting process for ASIN: B0CW9NM23B
+2025-02-03 07:55:49,822 - INFO - Product with ASIN B0CW9NM23B does not exist, proceeding with import.
+2025-02-03 07:55:50,122 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:55:50,488 - INFO - Product pushed successfully with ID: c7811957-e970-48cc-9faa-ec76b1cc78e8
+2025-02-03 07:55:50,865 - INFO - Product added to reference with ID: 12cd419d-84aa-4a3b-8ec4-19cd212448ca
+2025-02-03 07:56:02,568 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:56:05,287 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:56:06,428 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:56:07,146 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:56:07,729 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:56:08,276 - INFO - Product pushed successfully with ID: 81b04a06-1446-4a55-afed-6fc66bca5938
+2025-02-03 07:56:08,683 - INFO - Product added to reference with ID: e92bae17-a6d3-4583-8e18-82a8b11ba3df
+2025-02-03 07:56:16,855 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:56:20,254 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:56:21,482 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:56:22,404 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:56:23,201 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:56:23,520 - INFO - Product pushed successfully with ID: e7863f35-7ae2-4663-bdd6-fbdda104feb4
+2025-02-03 07:56:23,942 - INFO - Product added to reference with ID: eb3c143d-170f-4b75-abd7-5376118616c7
+2025-02-03 08:02:53,565 - INFO - Starting process for ASIN: B0BYF5HMR7
+2025-02-03 08:02:53,566 - INFO - Starting process for ASIN: B07CXFHDB2
+2025-02-03 08:02:53,567 - INFO - Starting process for ASIN: B09NRRGB27
+2025-02-03 08:02:54,088 - INFO - Product with ASIN B0BYF5HMR7 does not exist, proceeding with import.
+2025-02-03 08:02:54,089 - INFO - Product with ASIN B07CXFHDB2 does not exist, proceeding with import.
+2025-02-03 08:02:54,089 - INFO - Product with ASIN B09NRRGB27 does not exist, proceeding with import.
+2025-02-03 08:03:14,464 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:03:15,742 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:03:16,919 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:03:17,532 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:03:18,151 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:03:19,173 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:03:19,563 - INFO - Product pushed successfully with ID: 5f5f6104-1b1f-433e-bcf0-c6e63a73b49f
+2025-02-03 08:03:19,943 - INFO - Product added to reference with ID: 584a7ff6-25e2-4150-8a3a-98c14896d0b9
+2025-02-03 08:03:19,943 - INFO - Starting process for ASIN: B09S3N6LVC
+2025-02-03 08:03:20,299 - INFO - Product with ASIN B09S3N6LVC does not exist, proceeding with import.
+2025-02-03 08:03:21,136 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:03:21,868 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:03:22,134 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:03:23,023 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:03:23,986 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:03:24,399 - INFO - Product pushed successfully with ID: 87fe68a0-c228-4175-8328-d580c210fd07
+2025-02-03 08:03:24,804 - INFO - Product added to reference with ID: d66aac37-4b57-45d7-b115-e0ab836a8b82
+2025-02-03 08:03:24,805 - INFO - Starting process for ASIN: B0BWS3W2XZ
+2025-02-03 08:03:25,174 - INFO - Product with ASIN B0BWS3W2XZ does not exist, proceeding with import.
+2025-02-03 08:03:27,363 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:03:28,363 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:03:29,314 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:03:29,656 - INFO - Product pushed successfully with ID: 923fec69-6946-44f1-882a-3fbbfa0ad534
+2025-02-03 08:03:30,030 - INFO - Product added to reference with ID: da293577-9caf-419a-a13e-f72f51631635
+2025-02-03 08:03:30,030 - INFO - Starting process for ASIN: B0001E3S5Y
+2025-02-03 08:03:30,397 - INFO - Product with ASIN B0001E3S5Y does not exist, proceeding with import.
+2025-02-03 08:03:40,369 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:03:44,057 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:03:45,389 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:03:46,180 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:03:46,808 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:03:47,173 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:03:47,534 - INFO - Product pushed successfully with ID: 4cc510db-5364-48e2-8165-c43f205ecddd
+2025-02-03 08:03:47,875 - INFO - Product added to reference with ID: d84dabf7-6ff0-4c83-a589-7b77a8056b5f
+2025-02-03 08:03:47,876 - INFO - Starting process for ASIN: B01DW94KYM
+2025-02-03 08:03:48,208 - INFO - Product with ASIN B01DW94KYM does not exist, proceeding with import.
+2025-02-03 08:03:50,712 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:03:51,837 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:03:52,941 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:03:53,114 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:03:53,320 - INFO - Product pushed successfully with ID: 3bed7c88-34c3-4138-b5d8-0208f326120c
+2025-02-03 08:03:53,694 - INFO - Product added to reference with ID: 97b1ae11-cf4f-43aa-8516-785982abc4bc
+2025-02-03 08:03:53,695 - INFO - Starting process for ASIN: B073CRJ9YG
+2025-02-03 08:03:54,032 - INFO - Product with ASIN B073CRJ9YG does not exist, proceeding with import.
+2025-02-03 08:03:56,262 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:03:57,247 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:03:58,237 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:03:59,185 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:03:59,551 - INFO - Product pushed successfully with ID: 1be8324b-84de-468e-b6eb-af7701ce6ba7
+2025-02-03 08:03:59,941 - INFO - Product added to reference with ID: 64a3fa11-48da-49b6-af33-a8308b5a9484
+2025-02-03 08:03:59,942 - INFO - Starting process for ASIN: B08XWN5CJP
+2025-02-03 08:04:00,340 - INFO - Product with ASIN B08XWN5CJP does not exist, proceeding with import.
+2025-02-03 08:04:11,398 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:04:15,677 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:04:16,731 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:04:16,732 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:04:17,442 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:04:17,852 - INFO - Product pushed successfully with ID: d26d6c7e-1e0d-4659-b2ab-17d250056a28
+2025-02-03 08:04:18,260 - INFO - Product added to reference with ID: 821b3590-39fd-4d38-8bfd-3bef37e5a4b5
+2025-02-03 08:04:18,261 - INFO - Starting process for ASIN: B07PBMN7Y6
+2025-02-03 08:04:18,668 - INFO - Product with ASIN B07PBMN7Y6 does not exist, proceeding with import.
+2025-02-03 08:04:19,957 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:04:20,419 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:04:21,575 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:04:22,702 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:04:23,523 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:04:23,853 - INFO - Product pushed successfully with ID: 04478bde-42a1-41da-94bd-f6d76af1abc1
+2025-02-03 08:04:24,189 - INFO - Product added to reference with ID: db220660-a4bc-46be-ab0a-e234de3cae5e
+2025-02-03 08:04:29,627 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:04:31,577 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:04:32,505 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:04:33,766 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:04:34,087 - INFO - Product pushed successfully with ID: fe2c0420-0758-463f-9db8-a8514577ec80
+2025-02-03 08:04:34,434 - INFO - Product added to reference with ID: 98edd3fd-ee98-4f06-88d5-e4bdc3b7f1ff
+2025-02-03 08:04:40,377 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:04:45,352 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:04:46,672 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:04:47,490 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 08:04:47,853 - INFO - Product pushed successfully with ID: 41bfd53e-58cf-4618-8ad2-5c13efa9f585
+2025-02-03 08:04:48,263 - INFO - Product added to reference with ID: 057bbb10-e48d-4da3-be53-e40b2c0b1518

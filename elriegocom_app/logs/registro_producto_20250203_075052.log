@@ -1,0 +1,8 @@
+2025-02-03 07:50:52,583 - INFO - Starting process for ASIN: B0CX4TH6SC
+2025-02-03 07:50:54,007 - INFO - Product with ASIN B0CX4TH6SC does not exist, proceeding with import.
+2025-02-03 07:51:12,930 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:51:16,639 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:51:18,710 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:51:20,166 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 07:51:23,720 - INFO - Product pushed successfully with ID: c2fe330f-afe7-41cc-aa72-f52fbf09f2b4
+2025-02-03 07:51:24,067 - INFO - Product added to reference with ID: b379f558-71b3-4542-9442-4f502700140e

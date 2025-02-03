@@ -1,0 +1,9 @@
+2025-02-03 09:25:41,549 - INFO - Starting process for ASIN: B00X6AL9RO
+2025-02-03 09:25:41,870 - INFO - Product with ASIN B00X6AL9RO does not exist, proceeding with import.
+2025-02-03 09:26:21,262 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 09:26:27,096 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 09:26:28,318 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 09:26:29,234 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 09:26:30,272 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-03 09:26:30,655 - INFO - Product pushed successfully with ID: 1e85d34e-a877-4637-bf0d-f8526625c929
+2025-02-03 09:26:31,018 - INFO - Product added to reference with ID: f6383bd1-7ec8-40ee-a372-4649fe406ebf

@@ -643,7 +643,7 @@ class ElRiegoCOMClient:
             return results
 
         except Exception as e:
-            print(f"Error in sync wrapper: {str(e)}")
+            print(f"Error in sync wrapper: {str(e)}", file=sys.stderr)
             raise
 
 # # Main script
