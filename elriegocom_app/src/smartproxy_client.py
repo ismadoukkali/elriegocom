@@ -39,7 +39,19 @@ class SmartProxyClient:
         }
 
         response = requests.post(url, json=payload, headers=headers)
-        json_response = response.json()
+        try:
+            json_response = response.json()
+        except ValueError as e:
+            raise RuntimeError(
+                f"Smartproxy returned non-JSON (HTTP {response.status_code}): {(response.text or '')[:300]}"
+            ) from e
+
+        if response.status_code >= 400 or 'results' not in json_response:
+            raise RuntimeError(
+                f"Smartproxy scrape failed (HTTP {response.status_code}): "
+                f"{json_response.get('message') or json_response.get('error') or json_response}"
+            )
+
         html_content = json_response['results'][0]['content']
         return html_content
     
@@ -82,47 +94,73 @@ class SmartProxyClient:
         Returns:
             dict: Dictionary containing formatted price elements
         """
+        import re
+
         price_elements = {
             'product_price': [],
             'price_symbols': [],
             'discounts': [],
             'price_strikethrough': []
         }
+
+        def normalize_euro_price(text):
+            if not text:
+                return None
+            text = text.replace('\xa0', '').replace(' ', '').strip()
+            # Keep values like 26,70€ / 26.70€
+            match = re.search(r'(\d+[.,]\d{2})\s*€', text)
+            if match:
+                amount = match.group(1).replace('.', ',')
+                return f"{amount}€"
+            # Recover glued values like 2670€ -> 26,70€ when clearly cents
+            match = re.search(r'(\d+)€', text)
+            if match and len(match.group(1)) >= 3:
+                digits = match.group(1)
+                amount = f"{digits[:-2]},{digits[-2:]}"
+                return f"{amount}€"
+            return None
         
         try:
             soup = BeautifulSoup(html_content, 'html.parser')
-            
-            # Get current price (product_price) - checking both formats
-            current_price = None
-            # First format
-            current_price = soup.find(class_="a-price aok-align-center")
-            
-            # Second format (with reinventPricePriceToPayMargin)
-            if not current_price or not current_price.get_text(strip=True):
-                current_price = soup.find(class_="a-price aok-align-center reinventPricePriceToPayMargin priceToPay")
-            
+
             current_price_text = None
-            if current_price:
-                # Try to construct price from components if available
-                whole = current_price.find(class_="a-price-whole")
-                fraction = current_price.find(class_="a-price-fraction")
-                symbol = current_price.find(class_="a-price-symbol")
-                
-                if whole and fraction and symbol:
-                    whole_text = whole.get_text(strip=True).replace(',', '')
-                    fraction_text = fraction.get_text(strip=True)
-                    symbol_text = symbol.get_text(strip=True)
-                    current_price_text = f"{whole_text},{fraction_text}{symbol_text}"
-                else:
-                    # Fallback to getting full text if components aren't available
-                    price_text = current_price.get_text(strip=True)
-                    # Remove duplicate price if it appears twice
-                    if len(price_text) > 0:
-                        half_length = len(price_text) // 2
-                        current_price_text = price_text[:half_length] if price_text[:half_length] == price_text[half_length:] else price_text
-                
+
+            # Prefer main buybox / core price offscreen text
+            for css in [
+                '#corePrice_feature_div span.a-price span.a-offscreen',
+                '#corePriceDisplay_desktop_feature_div span.a-price span.a-offscreen',
+                '.a-price.priceToPay span.a-offscreen',
+                'span.a-price.aok-align-center span.a-offscreen',
+                'span.a-price span.a-offscreen',
+            ]:
+                el = soup.select_one(css)
+                current_price_text = normalize_euro_price(el.get_text(strip=True) if el else None)
                 if current_price_text:
-                    price_elements['product_price'] = [current_price_text]
+                    break
+
+            # Fallback: build from whole/fraction in the main price block
+            if not current_price_text:
+                current_price = (
+                    soup.select_one('#corePrice_feature_div .a-price')
+                    or soup.select_one('.a-price.priceToPay')
+                    or soup.find(class_="a-price aok-align-center reinventPricePriceToPayMargin priceToPay")
+                    or soup.find(class_="a-price aok-align-center")
+                )
+                if current_price:
+                    whole = current_price.find(class_="a-price-whole")
+                    fraction = current_price.find(class_="a-price-fraction")
+                    symbol = current_price.find(class_="a-price-symbol")
+                    if whole and fraction:
+                        whole_text = re.sub(r'[^\d]', '', whole.get_text(strip=True))
+                        fraction_text = re.sub(r'[^\d]', '', fraction.get_text(strip=True))
+                        symbol_text = (symbol.get_text(strip=True) if symbol else '€') or '€'
+                        if whole_text and fraction_text:
+                            current_price_text = normalize_euro_price(
+                                f"{whole_text},{fraction_text}{symbol_text}"
+                            )
+                
+            if current_price_text:
+                price_elements['product_price'] = [current_price_text]
 
             # Get price symbols
             symbols = soup.find_all(class_="a-price-symbol")
@@ -130,14 +168,17 @@ class SmartProxyClient:
             
             # Get savings percentage
             savings = soup.find(class_="a-size-large a-color-price savingPriceOverride aok-align-center reinventPriceSavingsPercentageMargin savingsPercentage")
+            if not savings:
+                savings = soup.select_one('.savingsPercentage, span.savingPriceOverride')
             savings_text = None
             if savings:
                 savings_text = savings.get_text(strip=True)
                 # Remove non-breaking space and ensure proper format
                 savings_text = savings_text.replace('\xa0', '')
-                if not savings_text.endswith('%'):
+                if savings_text and not savings_text.endswith('%'):
                     savings_text += '%'
-                price_elements['discounts'] = [savings_text]
+                if savings_text:
+                    price_elements['discounts'] = [savings_text]
                 
                 # Calculate strikethrough price when there's a discount
                 if current_price_text:

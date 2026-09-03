@@ -21,6 +21,11 @@ from typing import Type
 import time
 from typing import Literal
 import pytz
+from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv(Path(__file__).resolve().parents[2] / ".env", override=True)
+load_dotenv(override=True)
 
 # Configure logging
 logging.basicConfig(
