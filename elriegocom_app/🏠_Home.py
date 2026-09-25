@@ -12,8 +12,12 @@ def main():
     if not check_authentication():
         col_1, col_2, col_3 = st.columns([2, 5, 2])
         with col_2:
-          st.markdown("#### 🌱 Iniciar Sesión en Panel de Control de elriego.com")
-          st.caption("Bienvenido a la página de inicio de la aplicación de gestión de productos de elriego.com. Esta página te permite iniciar sesión y acceder a las diferentes secciones de la aplicación. Si tienes cualquier duda o necesitas ayuda, no dudes en contactarnos vía correo electrónico (idoukkali@apolomarketing.net)")
+          st.markdown("#### 🌱 Iniciar sesión — Panel de gestión elriego.com")
+          st.caption(
+              "Panel interno para importar productos de Amazon a Wix, generar blogs "
+              "comparativos y revisar el historial de actualizaciones de precios. "
+              "Soporte: idoukkali@apolomarketing.net"
+          )
           with st.form("login_form"):
               email = st.text_input("Email")
               password = st.text_input("Contraseña", type="password")
@@ -22,97 +26,65 @@ def main():
               if submit:
                   if login(email, password):
                       st.success("¡Inicio de sesión exitoso!")
-                      st.rerun()  # Changed from experimental_rerun() to rerun()
+                      st.rerun()
                   else:
                       st.error("Credenciales inválidas")
     else:
         st.markdown("""
-        ## 👋 Bienvenido al sistema de gestión de Elriego.com
+## 👋 Panel de gestión — elriego.com
 
-Este sistema integrado automatiza la gestión y actualización de contenido para la tienda online El Riego, permitiendo una operación eficiente y escalable.
+Herramienta interna de [elriego.com](https://apolomarketing.wixstudio.com/elriegocom) para publicar productos afiliados de Amazon (ES) en Wix, generar contenido con IA y consultar el resultado de las actualizaciones de precios.
 
-### Navegación
+Usa la **barra lateral** para moverte entre secciones.
 
-Utiliza la barra lateral para acceder a las diferentes funcionalidades:
+### Qué hace cada sección
 
-- 📦 **Subir Producto**: Sube productos individuales desde Amazon a Wix, manteniendo sincronizados precios y disponibilidad
-- 🏆 **Subir Bestsellers**: Importa automáticamente los productos más vendidos por categoría desde Amazon
-- 📝 **Subir Blog**: Genera contenido de calidad con comparativas de productos utilizando IA
-- 🔄 **Actualización de Precios**: Monitoriza y gestiona las actualizaciones automáticas de precios
+- 📦 **Subir Producto**  
+  Introduce un **ASIN** de Amazon.es. El sistema comprueba si ya existe en Wix; si no, lo scrapea, genera descripción / opinión de experto / categoría con IA y lo crea en la colección de productos.
 
-### Tecnologías Integradas
+- 🏆 **Subir Bestsellers**  
+  Introduce el **ID de categoría** de Amazon bestsellers (dominio ES). Importa los N productos más vendidos de esa categoría (mismo flujo que un producto individual, marcados como best seller).
 
-El sistema utiliza varias tecnologías punteras que trabajan en conjunto:
+- 📝 **Subir Blog**  
+  Introduce entre **2 y 5 ASINs**. Genera un artículo comparativo con IA y lo guarda como borrador de blog en Wix.
 
-#### Servicios de Web Scraping
-- **[Oxylabs](https://oxylabs.io/)**
-  - Utilizado para extraer datos detallados de productos
-  - Gestiona la rotación de IPs y bypass de captchas
-  - Proporciona datos estructurados de productos Amazon
+- 🔄 **Actualización de Precios**  
+  **Solo monitoriza** los logs de Google Cloud (`price_updates`). No lanza la actualización desde aquí. Los precios se recalculan con un job programado (Cloud Function + Smartproxy/Decodo) que escribe en Wix; esta página muestra qué se actualizó, se omitió o falló.
 
-- **[Smartproxy](https://smartproxy.com/)**
-  - Monitorización continua de precios
-  - Sistema de proxies residenciales para evitar bloqueos
-  - Actualización en tiempo real de cambios de precios
+### Cómo funciona el flujo (resumen)
 
-#### Infraestructura Cloud
-- **[Google Cloud](https://cloud.google.com/?hl=es)**
-  - Cloud Functions para automatización de tareas
-  - Cloud Scheduler para programación de actualizaciones
-  - Cloud Logging para monitorización y debugging
-  - Almacenamiento seguro de datos y credenciales
+1. **Importación de producto / bestsellers**  
+   [Oxylabs](https://oxylabs.io/) obtiene datos estructurados de Amazon.es → [OpenAI](https://openai.com/) genera textos y categorización → la [API de Wix](https://dev.wix.com/) crea o referencia el producto en el CMS ([estudio Wix del sitio](https://apolomarketing.wixstudio.com/elriegocom)).
 
-#### Gestión de Tienda
-- **[Wix](https://manage.wix.com/studio/sites)**
-  - Plataforma principal de la tienda online
-  - API para gestión automatizada de productos
-  - Actualización automática de precios y stock
-  - Gestión de contenido y blogs
+2. **Blog comparativo**  
+   Se scrapean los ASINs, OpenAI redacta la comparativa y Wix Blog recibe el borrador.
 
-#### Inteligencia Artificial
-- **[OpenAI](https://openai.com/)**
-  - Generación de descripciones de productos
-  - Creación de contenido para blog
-  - Análisis de productos para comparativas
-  - Optimización SEO de contenido
+3. **Precios**  
+   Un proceso aparte (historicamente Google Cloud Function + Scheduler en el proyecto `elriegocom`) consulta precios en Amazon vía [Decodo](https://decodo.com/) (antes Smartproxy), compara con Wix y actualiza si hay cambio. Los resultados se registran en Cloud Logging; este panel los lee para revisión.
 
-### Flujo de Trabajo
+### Servicios que usa el sistema
 
-1. **Extracción de Datos**
-   - Oxylabs extrae información detallada de productos de Amazon
-   - Smartproxy monitoriza continuamente los precios
+| Servicio | Rol en elriego |
+| --- | --- |
+| [Oxylabs](https://oxylabs.io/) | Scraping de fichas y bestsellers de Amazon al subir productos/blogs |
+| [Decodo](https://decodo.com/) (ex Smartproxy) | Scraping de precios para el job de actualización |
+| [OpenAI](https://openai.com/) | Descripciones, opinión de experto, categorías y blogs |
+| [Wix](https://www.wix.com/) / [Wix Studio](https://apolomarketing.wixstudio.com/elriegocom) | CMS de la tienda, productos y blogs |
+| [Google Cloud](https://console.cloud.google.com/home/dashboard?project=elriegocom) | Función/scheduler de precios y logs (`elriegocom` / `price_updates`) |
 
-2. **Procesamiento**
-   - Google Cloud Functions procesa y valida los datos
-   - OpenAI genera contenido optimizado
+### Notas operativas
 
-3. **Actualización**
-   - Wix API actualiza la tienda automáticamente
-   - El sistema mantiene sincronizados precios y stock
+- Hace falta iniciar sesión con la cuenta admin configurada en el entorno (`ADMIN_EMAIL` / `ADMIN_PASSWORD`).
+- Las credenciales de Oxylabs, Decodo/Smartproxy, OpenAI y Wix viven en variables de entorno (no en este panel).
+- La página de precios necesita `credentials.json` (cuenta de servicio de GCP) para leer logs.
+- Tras subir un producto, el enlace al detalle suele verse en la propia página de subida (ruta en el sitio Wix Studio).
 
-4. **Monitorización**
-   - Sistema de logging para seguimiento de operaciones
-   - Alertas automáticas ante cambios significativos
-   - Panel de control para visualización de métricas
-
-### Seguridad y Confiabilidad
-- Autenticación segura en todos los servicios
-- Encriptación de datos sensibles
-- Backups automáticos
-- Monitorización continua de errores
-
-### Métricas y Rendimiento
-- Seguimiento de actualizaciones de precios
-- Monitorización de éxito en scraping
-- Control de generación de contenido
-- Estadísticas de sincronización
-
-Para soporte técnico o consultas, contacta con el equipo de desarrollo.
+¿Dudas o incidencias? Contacta con **idoukkali@apolomarketing.net**.
         """)
         
         if st.sidebar.button("Cerrar Sesión"):
             st.session_state.authenticated = False
-            st.rerun()  # Changed from experimental_rerun() to rerun()
+            st.rerun()
 
 if __name__ == "__main__":
     main()
